@@ -11,7 +11,7 @@
 #include <BadRobot.Framework\BadRobotPad.mqh>
 #include <BadRobot.Framework\BadRobotPrompt.mqh>
 
-class Sample : public BadRobotPad
+class TraderPad : public BadRobotPad
 {
       public:
       

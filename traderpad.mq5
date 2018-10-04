@@ -70,7 +70,7 @@ input string               Secao10 = "###############";//### Config de Estratég
 input ENUM_TIMEFRAMES      Periodo = PERIOD_CURRENT;//Período da estratégia
 
 //variaveis
-Sample _ea;
+TraderPad _ea;
 
 int OnInit()
   {                  
