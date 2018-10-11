@@ -4,12 +4,14 @@
 //+------------------------------------------------------------------+
 
 #define   robot_name       "Trader Pad"
-#define   robot_version    "1.0.0"
+#define   robot_version    "1.1.0"
 
 #property copyright        "Copyright 2018, Bad Robot"
 #property link             "https://github.com/erlonfs"
 #property version       	robot_version
-#property description   	"Descrição aqui...\n\n\nBons trades!\n\nEquipe BAD ROBOT.\nerlon.efs@gmail.com"
+#property description   	"Trader Pad é uma ferramenta de extensão para potencializar a performance de um trader. " 
+                           "Faz todo o controle do trade a partir do ponto de entrada." 
+                           "\n\nBons trades!\n\nEquipe BAD ROBOT"
 #property icon             "traderpad.ico" 
 
 #include <..\Experts\traderpad.bad-robot\src\TraderPad.mqh>
