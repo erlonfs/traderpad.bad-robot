@@ -4,7 +4,7 @@
 //+------------------------------------------------------------------+
 
 #define   robot_name       "Trader Pad"
-#define   robot_version    "1.1.0"
+#define   robot_version    "1.2.0"
 
 #property copyright        "Copyright 2018, Bad Robot"
 #property link             "https://github.com/erlonfs"
