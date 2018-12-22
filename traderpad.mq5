@@ -18,12 +18,7 @@
 #include <BadRobot.Framework\Enum.mqh>
 
 input string               Secao1 = "###############";//### Definições Básicas ###
-input string               HoraInicio="00:00";//Hora de início de execução da estratégia
-input string               HoraFim="00:00";//Hora de término de execução da estratégia
-input string               HoraInicioIntervalo="00:00";//Hora de início intervalo de execução da estratégia
-input string               HoraFimIntervalo="00:00";//Hora de término intervalo de execução da estratégia
-input ENUM_LOGIC           FecharPosition=0;//Fechar posições ao término de horario de execução?
-input int                  Volume=0; //Volume
+input double               Volume=0; //Volume
 input ENUM_LAST_PRICE_TYPE TipoUltimoPreco=0;//Tipo de referência do ultimo preço
 input int                  Spread = 0;//Spread para entrada na operação em ticks
 
@@ -65,13 +60,6 @@ input int                  TerceiraParcialInicio=0;//Valor de inicio da 3ª saí
 input string               Secao8 = "###############";//### Expert Control ###
 input int                  NumeroMagico=0; //O número mágico é utilizado para diferenciar ordens de outros robôs
 
-input string               Secao9 = "###############";//### Notificações ###
-input ENUM_LOGIC           IsNotificacoesApp=0;//Ativar notificações no app do metatrader 5?
-
-input string               Secao10 = "###############";//### Config de Estratégia ###
-input ENUM_TIMEFRAMES      Periodo = PERIOD_CURRENT;//Período da estratégia
-input int						QtdCountCandlesMinMax=0;//Qdt de candles analisados mínima/ máxima
-
 //variaveis
 TraderPad _ea;
 
@@ -79,11 +67,6 @@ int OnInit()
 {                  	
    //Definições Básicas  
    _ea.SetSymbol(_Symbol);
-   _ea.SetHoraInicio(HoraInicio);
-   _ea.SetHoraFim(HoraFim);
-   _ea.SetHoraInicioIntervalo(HoraInicioIntervalo);
-   _ea.SetHoraFimIntervalo(HoraFimIntervalo);  
-   _ea.SetIsClosePosition(FecharPosition);
    _ea.SetVolume(Volume);
    _ea.SetSpread(Spread);
    _ea.SetLastPriceType(TipoUltimoPreco);
@@ -126,14 +109,10 @@ int OnInit()
    //Expert Control
    _ea.SetNumberMagic(NumeroMagico);
    _ea.SetRobotName(robot_name);
-   _ea.SetRobotVersion(robot_version);
-   
-   //Notificacoes
-   _ea.SetIsNotificacoesApp(IsNotificacoesApp);       
+   _ea.SetRobotVersion(robot_version);      
        
    //Estrategia
-   _ea.SetPeriod(Periodo); 
-   _ea.SetQtdCountLastCandles(QtdCountCandlesMinMax);  
+   _ea.SetPeriod(PERIOD_CURRENT);
    
    //Load Expert
  	return _ea.OnInit(); 	 	 
